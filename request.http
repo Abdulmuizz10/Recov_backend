@@ -1,0 +1,26 @@
+# GET http://localhost:5000/users
+# Content-Type: application/json
+
+# {
+#   "firstName": "Mr",
+#   "lastName": "Muizz",
+#   "email": "harrismuizz10@gmail.com",
+#   "password": "pass123",
+#   "isAdmin": true,
+#   "authMethod": "password"
+# }
+
+
+## Login
+POST http://localhost:5000/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "harrismuizz10@gmail.com",
+  "password": "pass123"
+}
+
+### Protected Route
+# GET http://localhost:5000/users
+# Cookie:  authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzhkYzc2NTgzYjQ1OTAyZjgwYjFhYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1Mjc1MTkyMSwiZXhwIjoxNzU1MzQzOTIxfQ.Q0zQE5qpMUSzFZY63JfHVol1fGpDBw4nUQGwaS5a8zA; Max-Age=2592000; Path=/; Expires=Sat, 16 Aug 2025 11:32:01 GMT; HttpOnly; SameSite=Lax
+
